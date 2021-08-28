@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="view/head.html :: head"></head>
+<body>
+<!-- pre loader area start -->
+<div th:replace="view/loader :: loader"></div>
+<!-- pre loader area end -->
+<!-- header area start -->
+<div th:replace="view/header :: header"></div>
+<!-- header area end -->
+<!-- search bar area start -->
+<div th:replace="view/search :: search"></div>
+<!-- search bar area end -->
+<main id="payment">
+
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<!-- body of  page -->
+
+<div id="paymentform">
+<form id="firstForm">
+
+<h3> Package </h3>
+</br>
+    <form action="/action_page.php">
+        <label for="quantity"> <strong>Number of People(between 1 and 15):</strong></label>
+        <input type="number" id="quantity" name="quantity" min="1" max="15">
+
+    </form>
+</form>
+</br>
+<form>
+    <label for="date"><strong>Select starting date:</strong></label>
+    <input type="date" id="date">
+
+    </br>
+    </br>
+    <button type="submit" class="btn" href="/success">Reserve Now</button>
+
+</form>
+
+
+</div>
+
+</br>
+</br>
+    <script src="orderPage.js"></script>
+    <div th:replace="view/footer.html :: footer"></div>
+    <div th:replace="view/scripts :: scripts"></div>
+</main>
+
+
+
+<!-- end of body of  page -->
+
+
+</body>
+</html>

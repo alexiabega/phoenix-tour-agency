@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="view/head.html :: head">
+  <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+
+<!-- pre loader area start -->
+<div th:replace="view/loader :: loader"></div>
+<!-- pre loader area end -->
+<!-- header area start -->
+<div th:replace="view/header :: header"></div>
+<!-- header area end -->
+<!-- search bar area start -->
+<div th:replace="view/search :: search"></div>
+<!-- search bar area end -->
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
+
+
+<form th:action="@{/register}" th:object="${user}" method="post" id="register">
+  <h2>Register Form</h2>
+  </br>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" th:value="${user.firstName}" th:field="*{firstName}" placeholder="First Name">
+  </div>
+</br>
+  <div class="input-container">
+    <i class="fa fa-user icon"></i>
+    <input class="input-field" type="text" th:value="${user.lastName}" th:field="*{lastName}" placeholder="Last Name" name="lstnm">
+  </div>
+  </br>
+  <div class="input-container">
+    <i class="fa fa-envelope icon"></i>
+    <input class="input-field" type="text" th:value="${user.email}" th:field="*{email}" placeholder="Email" name="email">
+  </div>
+  </br>
+  <div class="input-container">
+    <i class="fa fa-key icon"></i>
+    <input class="input-field" type="password" th:value="${user.password}" th:field="*{password}" placeholder="Password" name="psw">
+  </div>
+  </br>
+  <button type="submit" class="btn">Register</button>
+</form>
+</br>
+</br>
+</br>
+</br>
+</br>
+<div th:replace="view/footer.html :: footer"></div>
+<div th:replace="view/scripts :: scripts"></div>
+</body>
+</html>
